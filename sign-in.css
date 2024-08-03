@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root{
+    font-size: 62.5%;
+    --primary-color: #102C57;
+    --primary-color2: #fff;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+a, button{
+    cursor: pointer;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8F0E5;
+}
+
+.opening{
+    animation: showing 1.5s;
+}
+
+@keyframes showing {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+main{
+    width: 80%;
+    height: 570px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "signup login"
+    "combine";
+    box-shadow: 0 4px 7px 0px #000000;
+}
+
+.signup{
+    grid-area: signup combine;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup h1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--primary-color2);
+}
+
+.signup p{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--primary-color2);
+}
+
+.signup button{
+    width: 260px;
+    padding: 5px 20px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 30px;
+    color: var(--primary-color2);
+    border: 1px solid var(--primary-color2);
+    border-radius: 15px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.signup a{
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--primary-color2);
+}
+
+
+.login{
+    grid-area: login combine;
+    background-color: var(--primary-color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login h2{
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0 20px 20px 20px;
+    color: var(--primary-color);
+}
+
+.login .username{
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+
+.login .password{
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.login input{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 2.5px;
+    width: 250px;
+    color: var(--primary-color);
+}
+
+.login ::placeholder{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 2.5px;
+    color: var(--primary-color);
+}
+
+.login .forgot{
+    align-self: flex-start;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.login i {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    line-height: 30px;
+}
+
+.login .btn{
+    width: 150px;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    line-height: 30px;
+    text-align: center;
+    color: #DAC0A3;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+@media (320px <= width <= 768px) {
+    body{
+        width: 100%;
+        display: block;
+    }
+    
+    main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh 50vh;
+        grid-template-areas: 
+        "signup login"
+        "combine";
+        box-shadow: none;
+    }
+    
+    }
+
+/* Tablet styles */
+@media ( 769px <= width <= 1024px) { 
+
+    body{
+        width: 100%;
+    }
+
+    main{
+        width: 80%;
+        height: 570px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "signup login"
+        "combine";
+        box-shadow: 0 4px 7px 0px #000000;
+    }
+
+    .signup p{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .login input{
+        width: 230px;
+    }
+
+    .break{
+        display: none;
+    }
+
+}
+
+/* desktop styles */ 
+@media (1441px <= width <= 2560px) { 
+        
+    main{
+        width: 70%;
+        height: 570px;
+    }
+    
+    .signup h1{
+        font-size: 2.5rem;
+    }
+    
+    .signup p{
+        font-size: 1.5rem;
+    }
+    
+    .signup button{
+        width: 280px;
+    }
+    
+
+}
+
