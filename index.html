@@ -22,15 +22,21 @@
         <button><a href="#">SIGN UP</a></button>
       </div>
       <div class="login">
-        <form action="">
+        <form id="form" action="">
           <h2>Login</h2>
           <div class="username">
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Username" id="username" />
             <i class="bx bxs-user"></i>
+            <div>
+              <span style="color: red" id="name_error"></span>
+            </div>
           </div>
           <div class="password">
-            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Password" id="password" />
             <i class="bx bxs-lock"></i>
+            <div>
+              <span style="color: red" id="password_error"></span>
+            </div>
           </div>
           <div class="forgot">
             <a href="#">Forgot Pasword?</a>
@@ -41,5 +47,6 @@
         </form>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
