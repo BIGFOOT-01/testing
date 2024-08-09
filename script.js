@@ -29,12 +29,14 @@ form.addEventListener('submit',(e)=>
 
     else if(password.value === "password"){
        
+        e.preventDefault();
         password_error.innerHTML = "Password cannot be password";
 
     }
 
     else if(password.value.length >= 20){
        
+        e.preventDefault();
         password_error.innerHTML = "Password can't be more than 20 characters";
 
     }
