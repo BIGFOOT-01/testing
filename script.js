@@ -27,32 +27,19 @@ form.addEventListener('submit',(e)=>
 
         }
 
-    else{
-        password_error.innerHTML = "";
+    else if(password.value === "password"){
+       
+        password_error.innerHTML = "Password cannot be password";
+
     }
 
-    if(password.value === "password")
-        {
-            e.preventDefault();
-            password_error.innerHTML = "Password cannot be password";
+    else if(password.value.length >= 20){
+       
+        password_error.innerHTML = "Password can't be more than 20 characters";
 
-        }
-
-    else{
-        password_error.innerHTML = "";
     }
-
-    if(password.value.length >= 20)
-        {
-            e.preventDefault();
-            password_error.innerHTML = "Password can't be more than 20 characters ";
-
-        }
 
     else{
         password_error.innerHTML = "";
     }
-
-
-
 })
